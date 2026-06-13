@@ -2,8 +2,12 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  // MediaPipe ships WASM/asset files; allow CDN image overlays if needed.
-  images: { remotePatterns: [{ protocol: "https", hostname: "**" }] },
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "**" },
+    ],
+  },
 };
 
 export default nextConfig;
