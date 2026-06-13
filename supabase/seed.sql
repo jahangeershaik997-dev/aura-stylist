@@ -1,0 +1,12 @@
+-- Seed rows. Regenerate from lib/products/mockData.ts if the catalog changes.
+insert into products (id,name,category,price,currency,image_url,overlay_url,anchor,face_shapes,seasonal_tones,description,in_stock) values
+('acc-001','Aviator Frames — Gold','accessories',2499,'INR','/products/aviator-gold.png','/overlays/aviator-gold.png','eyes','{square,heart,oval}','{autumn,spring}','Lightweight teardrop aviators with a warm gold finish.',true),
+('acc-002','Rounded Acetate — Tortoise','accessories',1899,'INR','/products/round-tortoise.png','/overlays/round-tortoise.png','eyes','{square,oblong,diamond}','{autumn,winter}','Soft round acetate frames that offset angular jawlines.',true),
+('acc-003','Wayfarer — Matte Black','accessories',2199,'INR','/products/wayfarer-black.png','/overlays/wayfarer-black.png','eyes','{round,oval,heart}','{winter,summer}','Bold squared frames that add structure to softer faces.',true),
+('acc-004','Felt Fedora — Camel','accessories',1599,'INR','/products/fedora-camel.png','/overlays/fedora-camel.png','forehead','{oval,round,heart}','{autumn,spring}','Wide-brim camel fedora that elongates rounder faces.',true),
+('clo-001','Linen Shirt — Sage','clothes',1799,'INR','/products/linen-sage.png',null,'none','{oval,oblong,diamond}','{spring,summer}','Breathable sage linen — flatters cool, muted complexions.',true),
+('clo-002','Merino Crew — Charcoal','clothes',2999,'INR','/products/merino-charcoal.png',null,'none','{round,heart,square}','{winter,summer}','Deep charcoal merino with high contrast for winter tones.',true),
+('clo-003','Oxford Shirt — Rust','clothes',2199,'INR','/products/oxford-rust.png',null,'none','{square,oval}','{autumn}','Earthy rust oxford that warms autumn complexions.',false),
+('skn-001','Hydrating SPF 50 — Universal','skincare',899,'INR','/products/spf50.png',null,'none','{oval,round,square,heart,oblong,diamond}','{spring,summer,autumn,winter}','Lightweight broad-spectrum SPF, no white cast on deeper tones.',true),
+('skn-002','Warm-Tone Tinted Balm','skincare',749,'INR','/products/tinted-warm.png',null,'none','{oval,round,square,heart,oblong,diamond}','{autumn,spring}','Sheer balm tuned for warm undertones and golden skin.',true),
+('skn-003','Cool-Tone Brightening Serum','skincare',1299,'INR','/products/serum-cool.png',null,'none','{oval,round,square,heart,oblong,diamond}','{summer,winter}','Vitamin-C serum that evens cool, pink-based complexions.',true);
