@@ -57,7 +57,7 @@ export default function FaceCanvas({ selectedProduct, onAnalyze }: Props) {
       try {
         // 1. Get camera stream
         const stream = await navigator.mediaDevices.getUserMedia({
-          video: { width: { ideal: 640 }, height: { ideal: 480 }, facingMode: "user" },
+          video: { width: { ideal: 640, max: 1280 }, height: { ideal: 480, max: 960 }, facingMode: { exact: "user" } },
           audio: false,
         });
         if (cancelled) { stream.getTracks().forEach(t => t.stop()); return; }

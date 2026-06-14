@@ -1,9 +1,14 @@
 {
   "framework": "nextjs",
-  "buildCommand": "npm run vercel-build",
+  "buildCommand": "npm run build",
   "installCommand": "npm install",
   "outputDirectory": ".next",
   "regions": ["bom1"],
+  "functions": {
+    "app/api/**": {
+      "runtime": "nodejs20.x"
+    }
+  },
   "env": {
     "DATA_SOURCE": "mock"
   },
@@ -12,8 +17,7 @@
       "source": "/api/(.*)",
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        { "key": "X-Frame-Options", "value": "DENY" }
       ]
     }
   ]
